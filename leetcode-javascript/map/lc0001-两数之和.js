@@ -12,7 +12,7 @@ var twoSum = function(nums, target) {
 
 
 var twoSum = function(nums, target) {
-    let m = new Map()
+    let m = {}
     for(let i = 0; i < nums.length; i++) {
         x = target - nums[i]
         if(m[x] != undefined) {
