@@ -14,7 +14,7 @@ class Solution:
             if target - v in m:     # if d.get(target - v) is not None:
                 return [m[target - v], i]
             m[v] = i
-        return NULL
+        return None
 
 
 
