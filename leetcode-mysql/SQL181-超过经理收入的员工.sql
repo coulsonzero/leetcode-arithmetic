@@ -19,4 +19,9 @@
 
 select e.Name as Employee
 from employee e
-where salary > (select salary from employee where Id = e.ManagerId)
+where salary > (select salary from employee where Id = e.ManagerId);
+
+SELECT a.Name AS 'Employee'
+FROM Employee AS a, Employee AS b
+WHERE a.ManagerId = b.Id AND a.Salary > b.Salary
+;

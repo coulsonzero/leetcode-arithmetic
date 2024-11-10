@@ -9,10 +9,6 @@ function main() {
     // { '1': 1, '2': 2, '3': 1, '7': 3, '9': 1 }
 }
 
-// main()
+main()
 
 
-hello = () => {
-    console.log("hello, world")
-}
-hello()

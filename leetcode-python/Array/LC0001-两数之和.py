@@ -7,11 +7,11 @@ lc 两数之和
 
 
 class Solution:
-    @staticmethod
-    def twoSum(nums, target):
-        m = dict()                  # m = {}
+    # def twoSum(self, nums: list[int], target: int) -> list[int]:
+    def twoSum(self, nums, target):
+        m = {}                      # m = dict()
         for i, v in enumerate(nums):
-            if target - v in m:     # if d.get(target - v) is not None:
+            if target - v in m:     # if m.get(target - v) is not None:
                 return [m[target - v], i]
             m[v] = i
         return None
@@ -21,4 +21,5 @@ class Solution:
 if __name__ == '__main__':
     nums = [2, 7, 11, 15]
     target = 9
-    print(Solution.twoSum(nums, target))    # [0, 1]
+    s = Solution()
+    print(s.twoSum(nums, target))

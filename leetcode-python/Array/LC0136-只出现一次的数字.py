@@ -11,11 +11,16 @@
 
 
 class Solution:
-    def singleNumber(self, nums: List[int]) -> int:
+    def singleNumber(self, nums):
         m = {}
-        for i in range(len(nums)):
-            m[nums[i]] = m.get(nums[i], 0) + 1
+        for v in nums:
+            m[v] = m.get(v, 0) + 1
         for k in m:
             if m[k] == 1:
                 return k
         return -1
+
+if __name__ == '__main__':
+    nums = [4,1,2,1,2]
+    s = Solution()
+    print(s.singleNumber(nums))

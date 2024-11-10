@@ -14,6 +14,15 @@ class Solution:
 
 class Solution:
     def isPalindrome(self, s: str) -> bool:
+        ans = ''
+        for i in s.lower():
+            if i.isalnum():
+                ans += i
+        return ans == ans[::-1]
+
+
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
         res = str.lower(re.sub('[\W_+]','',s))
         return res == res[::-1]
 

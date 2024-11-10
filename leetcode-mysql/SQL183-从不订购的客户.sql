@@ -25,3 +25,11 @@
 
 select Name as Customers from Customers as c
 where c.Id not in(select CustomerId from Orders)
+
+# 2
+select customers.name as 'Customers'
+from customers
+where customers.id not in
+(
+    select customerid from orders
+);
